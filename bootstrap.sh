@@ -42,6 +42,8 @@ for file in *.conf; do
     ln -f `pwd`/$file $ast/$file
 done
 
+# Copia los archivos de audio
+cp sounds/* /var/lib/asterisk/sounds/custom/
 
 # Reinicia asterisk de cierta forma.
 amportal restart
