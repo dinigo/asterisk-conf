@@ -2,7 +2,7 @@
 
 # Actualiza los paquetes instalados e instala los necesarios
 yum update --assumeyes
-yum install perl perl-libwww-perl.noarch sox gcc make git
+yum install perl perl-libwww-perl.noarch sox gcc make git 7z
 
 
 # Descarga las fuentes de mpg123 y las instala
@@ -43,6 +43,7 @@ for file in *.conf; do
 done
 
 # Copia los archivos de audio
+7z e sounds.7z
 cp sounds/* /var/lib/asterisk/sounds/custom/
 
 # Reinicia asterisk de cierta forma.
